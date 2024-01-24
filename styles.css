@@ -3,6 +3,7 @@ html,body {
     border: 0;
     width: 100%;
     height: 100%;
+    box-sizing: content-box;
 }
 body {
     background-image: url("bg-image.svg");
@@ -25,12 +26,14 @@ main {
     display: flex;
     flex-direction: column;
     justify-content:flex-start;
-    align-items: center;
+    align-items: stretch;
 }
 
 .titles {
     text-align: center;
-    width: 700px;
+    align-self: center;
+    margin-left: 330px;
+    margin-right: 330px;
 }
 h1 {
     font-size: 64px;
@@ -42,18 +45,20 @@ h3 {
 }
 
 .myForm{
-    width: 800px;
+    width: auto;
+    margin-left: 235px;
+    margin-right: 235px;
     background-color: hsl(283, 77%, 42%);
-    padding: 20px;
+    padding: 32px;
     border-radius: 15px;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-gap: 10px;
+    grid-gap: 17px;
     grid-auto-rows: minmax(60px, auto);
 }
 .form-element {
     display: flex;
-    gap: 3px;
+    gap: 5px;
     flex-direction: column;
 }
 .message {
@@ -62,6 +67,8 @@ h3 {
     display: flex;
     flex-direction: column;
     height: 200px;
+    gap: 5px;
+
 }
 input {
     font-family: "Be Vietnam Pro", sans-serif;
@@ -70,16 +77,33 @@ input {
     height: 60px;
     border-radius: 15px;
     border: 0px;
-    padding-left: 10px;
+    padding-left: 20px;
+}
+
+.input-pickup {
+    height: 60px;
+    border-radius: 15px;
+    border: 0px;
+    padding-left: 20px;
+    font-weight: bold;
+
     
 }
 .input-message {
-    height: 100%;
-    text-align: left;
     font-weight: bold;
     color: black;
     border-radius: 15px;
     border: 0px;
+    padding-left: 20px;
+    padding-bottom: 135px;
+    padding-top: 10px;
+}
+
+.placeholder {
+    display:flex; 
+    flex-direction : column; 
+    align-items: end; 
+    justify-content: flex-end;
 }
 .input-pickup {
     font-weight: bold;
@@ -90,6 +114,7 @@ input {
     grid-column-end: 3;
     padding: 12px;
     font-size: 20px;
+    font-weight: bold;
     color: #4036A9;
     border-radius: 10px;
     border: 0px;
